@@ -1,2 +1,0 @@
-com/example/quizbuster/BuildConfig.java
- com.example.quizbuster.BuildConfig
