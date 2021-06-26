@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    tools:context=".QuizActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <!--        Progressbar Component-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/progressQuiz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="0"
+                android:progressTint="@color/success_color"
+                android:indeterminate="false"/>
+
+            <TextView
+                android:id="@+id/tvProgressValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0/10"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/primary_text_color" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Do you love C Programming?"
+            android:textSize="10sp"
+            android:textColor="@color/primary_text_color"
+            />
+
+        <ImageView
+            android:id="@+id/imgQuestionImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ques2"
+            android:contentDescription="Question Image"/>
+
+        <TextView
+            android:id="@+id/tvOptionOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Hello World!"
+            android:onClick="onOptionSelected"
+            android:textColor="@color/primary_text_color"
+            android:padding="15dp"
+            android:background="@drawable/default_border"/>
+
+        <TextView
+            android:id="@+id/tvOptionTwo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Hello World!"
+            android:onClick="onOptionSelected"
+            android:textColor="@color/primary_text_color"
+            android:padding="15dp"
+            android:background="@drawable/default_border"/>
+
+        <TextView
+            android:id="@+id/tvOptionThree"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Hello World!"
+            android:onClick="onOptionSelected"
+            android:textColor="@color/primary_text_color"
+            android:padding="15dp"
+            android:background="@drawable/default_border"/>
+
+        <TextView
+            android:id="@+id/tvOptionFour"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Hello World!"
+            android:onClick="onOptionSelected"
+            android:textColor="@color/primary_text_color"
+            android:padding="15dp"
+            android:background="@drawable/default_border"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Next Question"
+            android:onClick="onSubmitQuiz"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:padding="15dp"
+            app:cornerRadius="8dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
